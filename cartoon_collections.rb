@@ -6,8 +6,7 @@ end
 
 def summon_captain_planet(array)
   array.map do |name|
-    name.capitalize
-    name << "!"
+    "#{name.capitalize}!"
   end
 end
 
@@ -19,9 +18,7 @@ end
 
 def find_the_cheese(ingredients)
   cheese_types = ["cheddar", "gouda", "camembert"]
-  return ingredients.each do |ingredient|
-    break if cheese_types.include?(ingredient)
-    return ingredient
-    else return nil
+  ingredients.detect do |ingredient|
+    cheese_types.include?(ingredient)
     end
 end
