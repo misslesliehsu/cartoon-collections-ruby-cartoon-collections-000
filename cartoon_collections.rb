@@ -1,6 +1,8 @@
 def roll_call_dwarves(array)
-  array.each_with_index do |name, index|
-    puts "#{index+1}. #{name}"
+  counter = array.length/2
+  while counter <= cycles.length do 
+    puts "#{counter}. #{array[counter - 1]}"
+    counter +=1
   end
 end
 
@@ -17,8 +19,18 @@ def long_planeteer_calls(array)
 end
 
 def find_the_cheese(ingredients)
-  cheese_types = ["cheddar", "gouda", "camembert"]
+  cheese_types = ["cheddar", "gouda", "camembert", "swiss"]
   ingredients.detect do |ingredient|
     cheese_types.include?(ingredient)
     end
+end
+
+def words_with_b(array)
+  selections = []
+  array.each do |name|
+    if name.starts_with?("b")
+      selections += name
+    end
+  end
+  return selections
 end
